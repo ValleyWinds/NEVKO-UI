@@ -6,7 +6,7 @@
 ;(() => {
   "use strict"
 
-  const CONDITION = "Dock chats to the friends list" // = name of the option in skin.json
+  const CONDITION = "聊天停靠到好友列表" // = name of the option in skin.json
   const BUTTON_CLASS = "nk-dock-open"
   const HIDDEN_ATTR = "data-nk-dock-hidden"
   const SPOTLIGHT_KEY = "nevko-settings-spotlight"
@@ -20,8 +20,10 @@
   const ACTIVE_TAB = ".PagedSettingsDialog_PageListItem.Active"
   const FRIENDS_URL = "steam://settings/friends"
 
-  const RU = (document.documentElement.lang || navigator.language || "").toLowerCase().startsWith("ru")
-  const BUTTON_TEXT = RU ? "Открыть в настройках Steam" : "Open in Steam settings"
+  const LANG = (document.documentElement.lang || navigator.language || "").toLowerCase()
+  const BUTTON_TEXT = LANG.startsWith("zh") ? "在 Steam 设置中打开"
+    : LANG.startsWith("ru") ? "Открыть в настройках Steam"
+    : "Open in Steam settings"
 
 
   // Millennium window: the button
@@ -53,7 +55,7 @@
   }
 
   // Options that are only a note for now (always on while being tested): no switch, the description says why
-  const NOTE_ONLY = ["Save Deleted Messages"]
+  const NOTE_ONLY = ["保存已删除消息"]
 
   function scanFields() {
     for (const field of document.querySelectorAll(`[data-condition="${CONDITION}"]`)) placeButton(field)

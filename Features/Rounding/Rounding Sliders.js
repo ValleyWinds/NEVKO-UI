@@ -7,34 +7,34 @@
 
   const SLIDERS = [
     {
-      label: "Rounding Avatars",
+      label: "头像圆角",
       key: "nevko-avatar-rounding",
       min: 0, max: 50, default: 50,
-      format: value => value === 0 ? "Sharp" : value === 50 ? "Circle" : `${value}%`,
+      format: value => value === 0 ? "直角" : value === 50 ? "圆形" : `${value}%`,
     },
     {
-      label: "Rounding Framed Avatars",
+      label: "带边框头像圆角",
       key: "nevko-framed-avatar-rounding",
       min: 0, max: 50, default: 20,
-      format: value => value === 0 ? "Sharp" : value === 50 ? "Circle" : `${value}%`,
+      format: value => value === 0 ? "直角" : value === 50 ? "圆形" : `${value}%`,
     },
     {
-      label: "Rounding Group Avatars",
+      label: "群组头像圆角",
       key: "nevko-group-avatar-rounding",
       min: 0, max: 50, default: 25,
-      format: value => value === 0 ? "Sharp" : value === 50 ? "Circle" : `${value}%`,
+      format: value => value === 0 ? "直角" : value === 50 ? "圆形" : `${value}%`,
     },
     {
-      label: "Rounding Buttons",
+      label: "按钮圆角",
       key: "nevko-button-rounding",
       min: 0, max: 25, default: 6,
-      format: value => value === 0 ? "Sharp" : value === 25 ? "Round" : `${value}px`,
+      format: value => value === 0 ? "直角" : value === 25 ? "圆角" : `${value}px`,
     },
     {
-      label: "Rounding Messages",
+      label: "消息气泡圆角",
       key: "nevko-message-rounding",
       min: 0, max: 16, default: 16, // 16px = half of a one-line bubble
-      format: value => value === 0 ? "Sharp" : value === 16 ? "Round" : `${value}px`,
+      format: value => value === 0 ? "直角" : value === 16 ? "圆角" : `${value}px`,
     },
   ]
 
@@ -110,7 +110,7 @@
     const input = element("input", "nk-input")
     const label = element("span", "nk-label")
 
-    reset.textContent = "Reset"
+    reset.textContent = "重置"
     handle.append(element("div", "nk-dot"))
     track.append(defaultMarker(toPercent(slider.default)), fill, handle)
     trackWrap.append(track, input)

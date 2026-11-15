@@ -1,7 +1,7 @@
 {
   "name": "NEVKO-UI",
   "version": "1.1.0",
-  "description": "Another Design for Steam",
+  "description": "为 Steam 打造的另一种设计",
   "author": "dotFelixan",
 
   "RootColors": "Patches/Colors/root.css",
@@ -16,14 +16,14 @@
 
   "header_image": "https://i.imgur.com/2aRCvrt.png",
   "splash_image": "https://i.imgur.com/dqCDCH2.png",
-  "tags": ["WIP", "Customizable", "Quality of Life", "Features", "Privacy", "Accents", "Redesign", "Minimal" ],
+  "tags": ["开发中", "可自定义", "体验优化", "功能", "隐私", "强调色", "重设计", "极简" ],
 
   "Conditions": {
-    "Badges for Contributors": {
-      "description": "Shows badges next to the names of Boosty supporters and people who helped with the theme (bug reports, fixes, ideas). Only people who use NEVKO-UI see them",
+    "贡献者徽章": {
+      "description": "在 Boosty 支持者和帮助过主题的人（反馈 bug、修复、点子）名字旁显示徽章。只有使用 NEVKO-UI 的人能看到",
       "default": "yes",
-      "tab": "General",
-	  "section": "Contributors",
+      "tab": "通用",
+	  "section": "贡献者",
       "values": {
         "no": {},
         "yes": {
@@ -35,43 +35,43 @@
       }
     },
 
-    "Rounding Avatars": {
-      "description": "How round avatars are across Steam, from square to a full circle",
+    "头像圆角": {
+      "description": "Steam 各处头像的圆角程度，从方形到完整的圆形",
       "default": "",
-      "tab": "General",
-	  "section": "Users",
+      "tab": "通用",
+	  "section": "用户",
       "values": { "": {} }
     },
 
-    "Rounding Framed Avatars": {
-      "description": "How round avatars with a profile frame are, so the frame still fits around them",
+    "带边框头像圆角": {
+      "description": "带资料边框的头像圆角程度，边框仍能贴合头像",
       "default": "",
-      "tab": "General",
-	  "section": "Users",
+      "tab": "通用",
+	  "section": "用户",
       "values": { "": {} }
     },
 
-    "Rounding Group Avatars": {
-      "description": "How round group chat and group avatars are, separately from regular avatars",
+    "群组头像圆角": {
+      "description": "群聊和群组头像的圆角程度，与普通头像分开设置",
       "default": "",
-      "tab": "General",
-	  "section": "Users",
+      "tab": "通用",
+	  "section": "用户",
       "values": { "": {} }
     },
 
-    "Online Indicator": {
-      "description": "Shows online status as Steam's classic side bar or as a small dot on the avatar",
-      "default": "Modern",
-      "tab": "General",
-	  "section": "Users",
+    "在线状态指示": {
+      "description": "在线状态显示为 Steam 经典的侧边条，或头像上的小圆点",
+      "default": "现代",
+      "tab": "通用",
+	  "section": "用户",
       "values": {
-        "Legacy": {
+        "经典": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Features/Status Indicator/Legacy Status Indicator.css"
 			}
           },
-        "Modern": {
+        "现代": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Features/Status Indicator/Modern Status Indicator.css"
@@ -80,11 +80,11 @@
       }
     },
 
-    "Avatar Decoration": {
-      "description": "Hides avatar frames everywhere in Steam",
+    "头像边框": {
+      "description": "隐藏 Steam 各处的头像边框",
       "default": "no",
-      "tab": "General",
-	  "section": "Users",
+      "tab": "通用",
+	  "section": "用户",
       "values": {
         "no": {},
         "yes": {
@@ -100,11 +100,11 @@
       }
     },
 
-    "Hide Custom Username Icon": {
-      "description": "Hides the small icon Steam shows next to custom usernames",
+    "隐藏自定义用户名图标": {
+      "description": "隐藏 Steam 在自定义用户名旁显示的小图标",
       "default": "no",
-      "tab": "General",
-	  "section": "Users",
+      "tab": "通用",
+	  "section": "用户",
       "values": {
         "no": {},
         "yes": {
@@ -116,19 +116,19 @@
       }
     },
 
-    "Relative Last Seen": {
-      "description": "How \"Last seen\" is shown for offline friends, as Steam's usual text or as the exact time",
-      "default": "Exact Time",
-      "tab": "General",
-	  "section": "General",
+    "最后在线时间": {
+      "description": "离线好友的「最后在线」显示方式：Steam 惯用的文字，或精确时间",
+      "default": "精确时间",
+      "tab": "通用",
+	  "section": "通用",
       "values": {
-        "Disable": {
+        "关闭": {
           "TargetJs": {
             "affects": ["^.*$", ".*"],
             "src": "Features/Relative Last Seen/Disable Time.js"
           }
         },
-        "Exact Time": {
+        "精确时间": {
           "TargetJs": {
             "affects": ["^.*$", ".*"],
             "src": "Features/Relative Last Seen/LastSeen.js"
@@ -137,11 +137,11 @@
       }
     },
 
-    "Bypass Age Verification": {
-      "description": "Skips the age check on store pages with mature content",
+    "跳过年龄验证": {
+      "description": "跳过含成人内容商店页面的年龄验证",
       "default": "no",
-      "tab": "General",
-	  "section": "Other",
+      "tab": "通用",
+	  "section": "其他",
       "values": {
         "no": {},
         "yes": {
@@ -153,20 +153,20 @@
       }
     },
 
-    "Fake Device Status": {
-      "description": "Shows a Big Picture or phone icon next to your status, as if you were on that device",
-      "default": "Disabled",
-      "tab": "General",
-	  "section": "Other",
+    "伪装设备状态": {
+      "description": "在状态旁显示大屏幕或手机图标，就像你正在用那台设备",
+      "default": "关闭",
+      "tab": "通用",
+	  "section": "其他",
       "values": {
-        "Disabled": {},
-        "Big Picture": {
+        "关闭": {},
+        "大屏幕模式": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Features/Client Type/Big Picture.css"
           }
         },
-        "Mobile": {
+        "手机": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Features/Client Type/Mobile.css"
@@ -175,19 +175,19 @@
       }
     },
 
-    "Rounding Buttons": {
-      "description": "How round buttons, menus and cards are across the theme",
+    "按钮圆角": {
+      "description": "主题内按钮、菜单和卡片的圆角程度",
       "default": "",
-      "tab": "UI Personalization",
-	  "section": "Main",
+      "tab": "界面个性化",
+	  "section": "主要",
       "values": { "": {} }
     },
 
-    "Button Press Animation": {
-      "description": "Buttons shrink a little when you click them",
+    "按钮按下动画": {
+      "description": "点击按钮时它们会稍稍缩小",
       "default": "yes",
-      "tab": "UI Personalization",
-      "section": "Main",
+      "tab": "界面个性化",
+      "section": "主要",
       "values": {
         "no": {},
         "yes": {
@@ -199,11 +199,11 @@
       }
     },
 
-    "Reorder Main Buttons": {
-      "description": "Swaps the Store and Library buttons in the header",
+    "交换主按钮顺序": {
+      "description": "交换顶栏上的商店和游戏库按钮",
       "default": "yes",
-      "tab": "UI Personalization",
-	  "section": "Header",
+      "tab": "界面个性化",
+	  "section": "顶部栏",
       "values": {
         "no": {},
         "yes": {
@@ -215,11 +215,11 @@
       }
     },
 
-    "Hide Profile Button": {
-      "description": "Removes the profile button from the header and moves its useful buttons to the account menu",
+    "隐藏个人资料按钮": {
+      "description": "从顶栏移除个人资料按钮，把其中有用的按钮移到账户菜单",
       "default": "yes",
-      "tab": "UI Personalization",
-	  "section": "Header",
+      "tab": "界面个性化",
+	  "section": "顶部栏",
       "values": {
         "no": {},
         "yes": {
@@ -235,33 +235,33 @@
       }
     },
 
-    "Main Buttons": {
-      "description": "Shows the header buttons as text, icons, or both",
-      "default": "Text and Icons",
-      "tab": "UI Personalization",
-      "section": "Header",
+    "主按钮样式": {
+      "description": "顶栏按钮显示为文字、图标或两者",
+      "default": "文字和图标",
+      "tab": "界面个性化",
+      "section": "顶部栏",
       "values": {
-        "Text and Icons": {
+        "文字和图标": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Features/Main Buttons Icons/Text and Icons.css"
           }
         },
-        "Icons": {
+        "仅图标": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Features/Main Buttons Icons/Icons.css"
           }
         },
-        "Text": {}
+        "仅文字": {}
       }
     },
 
-    "Steam Modes Button": {
-      "description": "Adds a header button to switch to Big Picture or SteamVR",
+    "Steam 模式按钮": {
+      "description": "在顶栏添加切换到大屏幕或 SteamVR 的按钮",
       "default": "no",
-      "tab": "UI Personalization",
-	  "section": "Header",
+      "tab": "界面个性化",
+	  "section": "顶部栏",
       "values": {
         "no": {},
         "yes": {
@@ -273,11 +273,11 @@
       }
     },
 
-    "Compact Manage Downloads Button": {
-      "description": "Turns the downloads button into a small icon with a progress bar",
+    "紧凑下载按钮": {
+      "description": "把下载按钮变成带进度条的小图标",
       "default": "no",
-      "tab": "UI Personalization",
-	  "section": "Header",
+      "tab": "界面个性化",
+	  "section": "顶部栏",
       "values": {
         "no": {},
         "yes": {
@@ -289,32 +289,32 @@
       }
     },
 
-    "Account Button": {
-      "description": "Chooses what the account button in the header shows",
-      "default": "Default",
-      "tab": "UI Personalization",
-	  "section": "Header",
+    "账户按钮": {
+      "description": "选择顶栏账户按钮显示的内容",
+      "default": "默认",
+      "tab": "界面个性化",
+	  "section": "顶部栏",
       "values": {
-        "Default": {},
-        "Minimal": {
+        "默认": {},
+        "极简": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Main Design/Header/Account Button Style/Minimal.css"
           }
 		},
-        "Hide Nickname": {
+        "隐藏昵称": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Main Design/Header/Account Button Style/Nickname.css"
           }
 		},
-        "Hide Balance": {
+        "隐藏余额": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Main Design/Header/Account Button Style/Balance.css"
           }
 		},
-        "Hide Both": {
+        "两者都隐藏": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Main Design/Header/Account Button Style/Balance and Nickname.css"
@@ -323,50 +323,50 @@
       }
     },
 
-    "Window Buttons": {
-      "description": "Hides some or all of the minimize, maximize and close buttons",
-      "default": "None",
-      "tab": "UI Personalization",
-	  "section": "Header",
+    "窗口按钮": {
+      "description": "隐藏部分或全部最小化、最大化、关闭按钮",
+      "default": "无",
+      "tab": "界面个性化",
+	  "section": "顶部栏",
       "values": {
-        "None": {},
-        "[Collapse] Only": {
+        "无": {},
+        "仅 [最小化]": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Header/Window Buttons/collapse-o.css"
           }
         },
-        "[Expand] Only": {
+        "仅 [最大化]": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Header/Window Buttons/expand-o.css"
           }
         },
-        "[Close] Only": {
+        "仅 [关闭]": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Header/Window Buttons/close-o.css"
           }
         },
-        "[Collapse + Expand]": {
+        "[最小化 + 最大化]": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Header/Window Buttons/collapse-expand.css"
           }
         },
-        "[Collapse + Close]": {
+        "[最小化 + 关闭]": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Header/Window Buttons/collapse-close.css"
           }
         },
-        "[Expand + Close]": {
+        "[最大化 + 关闭]": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Header/Window Buttons/expand-close.css"
           }
         },
-        "All": {
+        "全部": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Header/Window Buttons/hide all.css"
@@ -375,26 +375,26 @@
       }
     },
 
-    "Library Items": {
-      "description": "Hides the What's New section, the Add Shelf button, or both on the library home page",
-      "default": "None",
-      "tab": "UI Personalization",
-	  "section": "Library",
+    "库页面项目": {
+      "description": "在游戏库首页隐藏「新品」区域、「添加展架」按钮，或两者都隐藏",
+      "default": "无",
+      "tab": "界面个性化",
+	  "section": "游戏库",
       "values": {
-        "None": {},
-        "[What's New] Only": {
+        "无": {},
+        "仅 [新品]": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Main Design/Library/Hide Library Items/News.css"
           }
         },
-        "[Add Shelf] Only": {
+        "仅 [添加展架]": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Main Design/Library/Hide Library Items/Shelf.css"
           }
         },
-        "Both": {
+        "两者": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Main Design/Library/Hide Library Items/Both.css"
@@ -403,11 +403,11 @@
       }
     },
 
-    "Remove Shiny Effect": {
-      "description": "Removes the shine that runs across game covers when you hover them",
+    "移除封面反光": {
+      "description": "移除鼠标悬停在游戏封面时扫过的反光",
       "default": "yes",
-      "tab": "UI Personalization",
-	  "section": "Library",
+      "tab": "界面个性化",
+	  "section": "游戏库",
       "values": {
         "no": {},
         "yes": {
@@ -419,26 +419,26 @@
       }
     },
 
-    "Achievements Tab": {
-      "description": "Hides the Recent and Unreached Achievements sections in the achievements tab",
-      "default": "None",
-      "tab": "UI Personalization",
-	  "section": "Library",
+    "成就页面": {
+      "description": "在成就页面隐藏「最近」和「未达成成就」区域",
+      "default": "无",
+      "tab": "界面个性化",
+	  "section": "游戏库",
       "values": {
-        "None": {},
-        "[Recent] Only": {
+        "无": {},
+        "仅 [最近]": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Main Design/Library/Hide Library Items/Achievements/Recent.css"
           }
         },
-        "[Unreached Achievements] Only": {
+        "仅 [未达成成就]": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Main Design/Library/Hide Library Items/Achievements/Missed Achievements.css"
           }
         },
-        "Both": {
+        "两者": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Main Design/Library/Hide Library Items/Achievements/Both.css"
@@ -447,11 +447,11 @@
       }
     },
 
-    "Hide Unread Count in Friends": {
-      "description": "Hides the unread message counter next to friends in the list",
+    "隐藏好友未读数": {
+      "description": "隐藏好友列表中好友旁的未读消息计数",
       "default": "no",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "no": {},
         "yes": {
@@ -463,11 +463,11 @@
       }
     },
 
-    "Hide Unread Messages Group": {
-      "description": "Hides the Unread Messages group at the top of the friends list",
+    "隐藏未读消息分组": {
+      "description": "隐藏好友列表顶部的未读消息分组",
       "default": "no",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "no": {},
         "yes": {
@@ -479,14 +479,14 @@
       }
     },
 
-    "Default Friends Tab": {
-      "description": "Which tab the friends list opens on",
-      "default": "Friends",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+    "默认标签页": {
+      "description": "好友列表默认打开哪个标签页",
+      "default": "好友",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
-        "Friends": {},
-        "Chats": {
+        "好友": {},
+        "聊天": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Friends&Chats/Friends List/Tabs & Search/Options/Default Tab Chats.css"
@@ -495,14 +495,14 @@
       }
     },
 
-    "Group Chats Position": {
-      "description": "Shows group chats above or below recent chats in the Chats tab",
-      "default": "Bottom",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+    "群聊位置": {
+      "description": "在聊天标签页中把群聊显示在最近聊天上方或下方",
+      "default": "底部",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
-        "Top": {},
-        "Bottom": {
+        "顶部": {},
+        "底部": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Friends&Chats/Friends List/Tabs & Search/Options/Group Chats Bottom.css"
@@ -511,38 +511,38 @@
       }
     },
 
-    "Dock chats to the friends list": {
+    "聊天停靠到好友列表": {
       "description": "",
       "default": "yes",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "no": {},
         "yes": {}
       }
     },
 
-    "Chat Window Title": {
-      "description": "Shows a header with the friend's name and status, or Steam's tabs, at the top of the chat",
-      "default": "Header",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+    "聊天窗口标题": {
+      "description": "在聊天顶部显示带好友名字和状态的顶栏，或 Steam 的标签页",
+      "default": "顶栏",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
-        "Header": {
+        "顶栏": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Friends&Chats/Chat/Options/Chat Window Header.css"
           }
         },
-        "Tabs": {}
+        "标签页": {}
       }
     },
 
-    "Auto Close Chat Tabs": {
-      "description": "With the header on, opening a chat closes the others. When off, a button lists all open chats",
+    "自动关闭聊天标签": {
+      "description": "开启顶栏时，打开一个聊天会关闭其他聊天。关闭后，用一个按钮列出所有已打开的聊天",
       "default": "yes",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "no": {},
         "yes": {
@@ -554,11 +554,11 @@
       }
     },
 
-    "Always Show Voice Dock": {
-      "description": "Keeps the voice chat panel visible even while you are in the voice channel's chat",
+    "始终显示语音面板": {
+      "description": "即使正在看语音频道的聊天，也保持语音面板可见",
       "default": "no",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "no": {},
         "yes": {
@@ -570,11 +570,11 @@
       }
     },
 
-    "Chat on Double Click": {
-      "description": "Opens a chat when you double click a friend, instead of using the chat button",
+    "双击打开聊天": {
+      "description": "双击好友即可打开聊天，不必再点聊天按钮",
       "default": "no",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "no": {},
         "yes": {
@@ -586,11 +586,11 @@
       }
     },
 
-    "Hide Friends Tabs": {
-      "description": "Hides the Friends and Chats tabs at the top of the friends list",
+    "隐藏好友标签页": {
+      "description": "隐藏好友列表顶部的好友和聊天标签页",
       "default": "no",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "no": {},
         "yes": {
@@ -602,22 +602,22 @@
       }
     },
 
-    "Rounding Messages": {
-      "description": "How round chat message bubbles are, from square to fully round",
+    "消息气泡圆角": {
+      "description": "聊天消息气泡的圆角程度，从方形到完全圆润",
       "default": "",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": { "": {} }
     },
 
-    "Message Field Buttons": {
-      "description": "Places the emoticon and attachment buttons outside or inside the message field",
-      "default": "Outside",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+    "消息框按钮位置": {
+      "description": "把表情和附件按钮放在消息框外部或内部",
+      "default": "外部",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
-        "Outside": {},
-        "Inside": {
+        "外部": {},
+        "内部": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Friends&Chats/Chat/Options/Message Buttons Inside.css"
@@ -626,20 +626,20 @@
       }
     },
 
-    "Emoticon Size": {
-      "description": "Size of emoticons in the emoticon menu",
-      "default": "Small",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+    "表情尺寸": {
+      "description": "表情菜单中表情的尺寸",
+      "default": "小",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
-        "Small": {},
-        "Medium": {
+        "小": {},
+        "中": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Friends&Chats/Chat/Options/Emoticons Medium.css"
           }
         },
-        "Large": {
+        "大": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Friends&Chats/Chat/Options/Emoticons Large.css"
@@ -648,14 +648,14 @@
       }
     },
 
-    "Stickers in Menu": {
-      "description": "Stickers in the emoticon menu play only on hover or all the time. On hover is lighter on performance",
-      "default": "Animated on Hover",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+    "贴纸动效": {
+      "description": "表情菜单中的贴纸只在悬停时播放或一直播放。悬停播放对性能更友好",
+      "default": "悬停时播放",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
-        "Animated on Hover": {},
-        "Always Animated": {
+        "悬停时播放": {},
+        "一直播放": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Friends&Chats/Chat/Options/Stickers Always Animated.css"
@@ -664,14 +664,14 @@
       }
     },
 
-    "GIFs in Menu": {
-      "description": "GIFs in the GIF tab play only on hover or all the time. On hover is lighter on performance",
-      "default": "Animated on Hover",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+    "GIF 动效": {
+      "description": "GIF 标签页中的 GIF 只在悬停时播放或一直播放。悬停播放对性能更友好",
+      "default": "悬停时播放",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
-        "Animated on Hover": {},
-        "Always Animated": {
+        "悬停时播放": {},
+        "一直播放": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Friends&Chats/Chat/Options/Gifs Always Animated.css"
@@ -680,20 +680,20 @@
       }
     },
 
-    "Sticker Size": {
-      "description": "Size of stickers in the emoticon menu",
-      "default": "Small",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+    "贴纸尺寸": {
+      "description": "表情菜单中贴纸的尺寸",
+      "default": "小",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
-        "Small": {},
-        "Medium": {
+        "小": {},
+        "中": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Friends&Chats/Chat/Options/Stickers Medium.css"
           }
         },
-        "Large": {
+        "大": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Friends&Chats/Chat/Options/Stickers Large.css"
@@ -702,11 +702,11 @@
       }
     },
 
-    "Emoticon Side Panel": {
-      "description": "Clicking the emoticon button opens the menu as a panel beside the chat",
+    "表情侧边面板": {
+      "description": "点击表情按钮时，菜单以聊天旁的侧边面板打开",
       "default": "no",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "no": {},
         "yes": {
@@ -722,11 +722,11 @@
       }
     },
 
-    "Chat Header Background": {
-      "description": "Shows the friend's mini profile background behind the chat header",
+    "聊天顶栏背景": {
+      "description": "在聊天顶栏后方显示好友的迷你资料背景",
       "default": "no",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "yes": {},
         "no": {
@@ -738,13 +738,13 @@
       }
     },
 
-    "Emoji Style": {
-      "description": "Which emoji set is used in chats and in the emoticon menu",
+    "Emoji 风格": {
+      "description": "聊天和表情菜单中使用哪套 emoji",
       "default": "Twitter",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
-        "System": {},
+        "系统": {},
         "Apple": {
           "TargetCss": {
             "affects": ["^.*$"],
@@ -772,11 +772,11 @@
       }
     },
 
-    "GIF Source": {
-      "description": "Where the GIF tab searches for GIFs. Either service needs your own API key",
+    "GIF 来源": {
+      "description": "GIF 标签页从哪个服务搜索 GIF。两个服务都需要你自己的 API 密钥",
       "default": "Giphy",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "Giphy": {},
         "Klipy": {
@@ -788,22 +788,22 @@
       }
     },
 
-    "Save Deleted Messages": {
-      "description": "Keeps deleted and expired messages in your chats. They're stored only on your PC. For now this can't be turned off while it's being tested, an option to disable it and clear saved messages is coming later",
+    "保存已删除消息": {
+      "description": "在聊天中保留已删除和已过期的消息，只保存在你的电脑上。测试期间暂时无法关闭，之后会提供关闭并清除已保存消息的选项",
       "default": "yes",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "no": {},
         "yes": {}
       }
     },
 
-    "Faded Deleted Messages": {
-      "description": "Deleted messages that stay in the chat are shown slightly faded",
+    "淡化已删除消息": {
+      "description": "留在聊天中的已删除消息会以淡淡的半透明显示",
       "default": "yes",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "no": {},
         "yes": {
@@ -815,11 +815,11 @@
       }
     },
 
-    "Emoticons in Message Field": {
-      "description": "Shows Steam emoticons as pictures while you type",
+    "消息框内显示表情图": {
+      "description": "输入时把 Steam 表情显示为图片",
       "default": "yes",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "yes": {},
         "no": {
@@ -831,14 +831,14 @@
       }
     },
 
-    "My Messages Side": {
-      "description": "Shows your own messages on the right or on the left of the chat",
-      "default": "Right",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+    "我的消息位置": {
+      "description": "把自己发的消息显示在聊天右侧或左侧",
+      "default": "右侧",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
-        "Left": {},
-        "Right": {
+        "左侧": {},
+        "右侧": {
           "TargetCss": {
             "affects": ["^.*$"],
             "src": "Main Design/Friends&Chats/Chat/Options/My Messages Right.css"
@@ -847,11 +847,11 @@
       }
     },
 
-    "Chat Avatars": {
-      "description": "Shows avatars next to messages in DM",
+    "聊天头像": {
+      "description": "在私聊消息旁显示头像",
       "default": "no",
-      "tab": "UI Personalization",
-      "section": "Friends&Chat",
+      "tab": "界面个性化",
+      "section": "好友与聊天",
       "values": {
         "yes": {},
         "no": {
@@ -863,19 +863,19 @@
       }
     },
 
-    "Context Menu": {
-      "description": "Uses Steam's original menus or the redesigned ones",
-      "default": "Refresh",
-      "tab": "UI Personalization",
-      "section": "Menus",
+    "右键菜单": {
+      "description": "使用 Steam 原始菜单，或重新设计的菜单",
+      "default": "新版",
+      "tab": "界面个性化",
+      "section": "菜单",
       "values": {
-        "Legacy": {
+        "经典": {
           "TargetJs": {
             "affects": ["^Steam$"],
             "src": "Main Design/Context Menu/Context Menu Renderer.js"
           }
         },
-        "Refresh": {
+        "新版": {
           "TargetCss": {
             "affects": ["^.*$", ".*"],
             "src": "Main Design/Context Menu/Context Menu.css"
@@ -888,14 +888,14 @@
       }
     },
 
-    "Menu Rendering": {
-      "description": "Draws menus inside the window or as separate popup windows",
-      "default": "In Window",
-      "tab": "UI Personalization",
-      "section": "Menus",
+    "菜单渲染方式": {
+      "description": "菜单绘制在窗口内，或作为独立的弹出窗口",
+      "default": "窗口内",
+      "tab": "界面个性化",
+      "section": "菜单",
       "values": {
-        "In Window": {},
-        "Popup Windows": {
+        "窗口内": {},
+        "弹出窗口": {
           "TargetCss": {
             "affects": ["^Steam$"],
             "src": "Main Design/Context Menu/Popup Menus.css"
@@ -904,11 +904,11 @@
       }
     },
 
-    "Blur Account Name": {
-      "description": "Blurs your account name",
+    "模糊账户名": {
+      "description": "模糊你的账户名",
       "default": "no",
-      "tab": "Privacy",
-	  "section": "Main",
+      "tab": "隐私",
+	  "section": "主要",
       "values": {
         "no": {},
         "yes": {
@@ -920,11 +920,11 @@
       }
     },
 
-    "Blur Balance": {
-      "description": "Blurs your wallet balance",
+    "模糊余额": {
+      "description": "模糊你的钱包余额",
       "default": "no",
-      "tab": "Privacy",
-	  "section": "Main",
+      "tab": "隐私",
+	  "section": "主要",
       "values": {
         "no": {},
         "yes": {

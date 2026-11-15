@@ -26,26 +26,29 @@
 
   // Texts
 
-  // Russian for a Russian client, English for the rest
-  const RU = (document.documentElement.lang || "").toLowerCase().startsWith("ru")
-  const text = (russian, english) => (RU ? russian : english)
+  // Russian for a Russian client, Chinese for a Chinese one, English for the rest
+  const LANG = (document.documentElement.lang || navigator.language || "").toLowerCase()
+  const RU = LANG.startsWith("ru")
+  const ZH = LANG.startsWith("zh")
+  const text = (russian, english, chinese) => (RU ? russian : ZH && chinese ? chinese : english)
 
   // How far the redesign has got. value: percent done; state: "progress" (being made) or "none" (not started)
   const PROGRESS = [
-    { name: "Header", value: 80 },
-    { name: "Friends & Chats", value: 80 },
-    { name: "Library", state: "progress" },
-    { name: text("Остальное", "Everything else"), state: "none" },
+    { name: text("Header", "Header", "顶栏"), value: 80 },
+    { name: text("Friends & Chats", "Friends & Chats", "好友与聊天"), value: 80 },
+    { name: text("Library", "Library", "游戏库"), state: "progress" },
+    { name: text("Остальное", "Everything else", "其他"), state: "none" },
   ]
   const STATE_TEXT = {
-    progress: text("В работе", "In progress"),
-    none: text("Не начато", "Not started"),
+    progress: text("В работе", "In progress", "进行中"),
+    none: text("Не начато", "Not started", "未开始"),
   }
 
   // A note from the author (the Info window). [[Discord]] and [[GitHub]] become links
   const NOTE = text(
     "Эту тему я делаю давно и не раз её забрасывал: одному тяжело, мотивация уходила, а кодера рядом не было. Потом я всё-таки решил использовать Claude, и теперь есть силы развивать проект дальше, в том направлении, в котором я хотел с самого начала. CSS по-прежнему пишу я, Claude его правит и пишет все скрипты. Перед каждым обновлением я всё проверяю, но баги всё равно могут присутствовать. О любом баге можно написать на [[Discord]]-сервере или на [[GitHub]].",
     "I have been making this theme for a long time and dropped it more than once: it is hard alone, the motivation ran out, and there was no coder around. Then I decided to use Claude after all, and now I have the energy to take the project further, in the direction I wanted from the very start. I still write the CSS, Claude fixes it and writes all of the scripts. I check everything before each update, but there may still be bugs. You can report any bug on the [[Discord]] server or on [[GitHub]].",
+    "这个主题我做了很久，中间也不止一次放下：一个人做太吃力，动力慢慢就没了，身边也没有会写代码的人。后来我还是决定用 Claude，现在才有精力继续把项目做下去，往我一开始就想要的方向走。CSS 依然是我自己写的，Claude 帮我修改并编写所有脚本。每次更新前我都会检查，但仍有可能存在 bug。任何 bug 都可以在 [[Discord]] 服务器或 [[GitHub]] 上告诉我。",
   )
   const NOTE_LINKS = { Discord: DISCORD_URL, GitHub: GITHUB_URL }
 
@@ -122,7 +125,7 @@
     buttons.append(
       button("GitHub", () => openUrl(GITHUB_URL)),
       button("Boosty", () => openUrl(BOOSTY_URL)),
-      button("Info", openInfo),
+      button(text("Инфо", "Info", "关于"), openInfo),
     )
     hero.append(logo, buttons)
     return hero
@@ -130,7 +133,7 @@
 
   function buildProgress() {
     const box = make("div", "nk-nevko-progress")
-    box.append(make("div", "nk-nevko-heading", text("Прогресс редизайна", "Redesign progress")))
+    box.append(make("div", "nk-nevko-heading", text("Прогресс редизайна", "Redesign progress", "重设计进度")))
     for (const { name, value, state } of PROGRESS) {
       const row = make("div", "nk-nevko-row")
       if (state) row.dataset.nkState = state
@@ -192,11 +195,11 @@
     })
     const box = make("div", "nk-nevko-info-window")
     const buttons = make("div", "nk-nevko-info-buttons")
-    const close = make("button", STEAM_BUTTON, text("Закрыть", "Close"))
+    const close = make("button", STEAM_BUTTON, text("Закрыть", "Close", "关闭"))
     close.type = "button"
     close.addEventListener("click", closeInfo)
     buttons.append(close)
-    box.append(make("div", "nk-nevko-info-title", text("О теме", "About the theme")), buildNote(), buttons)
+    box.append(make("div", "nk-nevko-info-title", text("О теме", "About the theme", "关于此主题")), buildNote(), buttons)
     overlay.append(box)
     document.body.append(overlay)
   }

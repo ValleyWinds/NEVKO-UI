@@ -4,34 +4,34 @@
 ;(() => {
   "use strict"
 
-  const UNSTABLE = "This feature is not yet stable and is still in development."
-  const BETA = { label: "Beta", color: "var(--badge-beta-color)", tooltip: UNSTABLE }
-  const ALPHA = { label: "Alpha", color: "var(--badge-alpha-color)", tooltip: UNSTABLE }
-  const UNFINISHED = { label: "Unfinished", color: "var(--badge-unfinished-color)", tooltip: "This feature is not finished yet and may not work." }
-  const UNTESTED = { label: "Untested", color: "var(--badge-untested-color)", tooltip: "This feature has not been fully tested yet and may behave unexpectedly." }
-  const PLUGIN = { label: "Plugin", color: "var(--badge-plugin-color)", tooltip: "Requires the Recent Chats plugin to work correctly." }
+  const UNSTABLE = "此功能尚不稳定，仍在开发中。"
+  const BETA = { label: "测试版", color: "var(--badge-beta-color)", tooltip: UNSTABLE }
+  const ALPHA = { label: "内测版", color: "var(--badge-alpha-color)", tooltip: UNSTABLE }
+  const UNFINISHED = { label: "未完成", color: "var(--badge-unfinished-color)", tooltip: "此功能尚未完成，可能无法使用。" }
+  const UNTESTED = { label: "未测试", color: "var(--badge-untested-color)", tooltip: "此功能尚未充分测试，可能表现异常。" }
+  const PLUGIN = { label: "插件", color: "var(--badge-plugin-color)", tooltip: "需要 Recent Chats 插件才能正常工作。" }
 
   const BADGES = {
-    "Rounding Avatars": BETA,
-    "Rounding Framed Avatars": BETA,
-    "Rounding Group Avatars": BETA,
-    "Avatar Decoration": BETA,
-    "Rounding Buttons": BETA,
-    "Badges for Contributors": ALPHA,
-    "Bypass Age Verification": ALPHA,
-    "Default Friends Tab": PLUGIN,
-    "Auto Close Chat Tabs": UNTESTED,
-    "Chat Header Background": BETA,
-    "Faded Deleted Messages": ALPHA,
-    "Save Deleted Messages": ALPHA,
-    "Menu Rendering": UNTESTED,
-    "Button Press Animation": BETA,
-    "Context Menu": ALPHA,
-    "Emoticon Side Panel": ALPHA,
-    "Emoticons in Message Field": ALPHA,
-    "Compact Manage Downloads Button": BETA,
-    "Fake Device Status": ALPHA,
-    "Blur Account Name": UNFINISHED,
+    "头像圆角": BETA,
+    "带边框头像圆角": BETA,
+    "群组头像圆角": BETA,
+    "头像边框": BETA,
+    "按钮圆角": BETA,
+    "贡献者徽章": ALPHA,
+    "跳过年龄验证": ALPHA,
+    "默认标签页": PLUGIN,
+    "自动关闭聊天标签": UNTESTED,
+    "聊天顶栏背景": BETA,
+    "淡化已删除消息": ALPHA,
+    "保存已删除消息": ALPHA,
+    "菜单渲染方式": UNTESTED,
+    "按钮按下动画": BETA,
+    "右键菜单": ALPHA,
+    "表情侧边面板": ALPHA,
+    "消息框内显示表情图": ALPHA,
+    "紧凑下载按钮": BETA,
+    "伪装设备状态": ALPHA,
+    "模糊账户名": UNFINISHED,
   }
 
 
